@@ -11,7 +11,10 @@ import SwiftUI
 struct BreweryApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if BrewChecker().hasHomebrew() {
+                ContentView()
+            }
+            EmptyView()
         }
     }
 }
